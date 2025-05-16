@@ -41,10 +41,9 @@ public class frmMain extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                new frmMain();
-            }
+        javax.swing.SwingUtilities.invokeLater(() -> {
+            //System.out.println("Đang khởi tạo frmMain");
+            new frmMain().setVisible(true); // THÊM setVisible
         });
     }
 }
